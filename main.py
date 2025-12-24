@@ -54,12 +54,12 @@ async def show_random_emojis(message):
     return emoji_message
     
 # Define the owner's user ID
-OWNER_ID = 5840594311 # Replace with the actual owner's user ID
+OWNER_ID = 6220046859 # Replace with the actual owner's user ID
 
 # List of sudo users (initially empty or pre-populated)
-SUDO_USERS = [5840594311,7856557198,6303334633]
+SUDO_USERS = [6220046859]
 
-AUTH_CHANNEL = -1002572301679
+AUTH_CHANNEL = -1003532488647
 
 # Function to check if a user is authorized
 def is_authorized(user_id: int) -> bool:
@@ -146,7 +146,7 @@ image_urls = [
 random_image_url = random.choice(image_urls) 
 # Caption for the image
 caption = (
-        "**ʜᴇʟʟᴏ👋**\n\n"
+        "**ʜᴇʟʟᴏ👋 I AM OBITO**\n\n"
         "➠ **ɪ ᴀᴍ ᴛxᴛ ᴛᴏ ᴠɪᴅᴇᴏ ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ.**\n"
         "➠ **ғᴏʀ ᴜsᴇ ᴍᴇ sᴇɴᴅ /tushar.\n"
         "➠ **ғᴏʀ ɢᴜɪᴅᴇ sᴇɴᴅ /help."
@@ -441,7 +441,7 @@ async def help_command(client: Client, msg: Message):
     await msg.reply_text(help_text)
 
 # Upload command handler
-@bot.on_message(filters.command(["tushar"]))
+@bot.on_message(filters.command(["Obito"]))
 async def upload(bot: Client, m: Message):
     if not is_authorized(m.chat.id):
         await m.reply_text("**🚫You are not authorized to use this bot.**")
